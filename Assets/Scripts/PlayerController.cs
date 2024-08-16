@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 15.0f;
+    public float speed = 16.0f;
     public float turnSpeed = 25.0f;
     public float horizontalInput;
     public float forwardInput;
@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //horizontal movement
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
